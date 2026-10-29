@@ -2,7 +2,7 @@
 
 **Give your AI agent a better way to work.**
 
-Six practical skills for remembering what matters, shipping software, running marketing experiments, publishing websites, planning sprints, and buying ads. Use one today or connect them into a delivery loop.
+Seven practical skills for running a business with AI agents, remembering what matters, shipping software, running marketing experiments, publishing websites, planning sprints, and buying ads. Use one today or connect them into a delivery loop.
 
 Built by [Julio](https://github.com/iamjulio). Free to use, adapt, and share under the [MIT license](LICENSE).
 
@@ -10,6 +10,7 @@ Built by [Julio](https://github.com/iamjulio). Free to use, adapt, and share und
 
 | You want to… | Start here | Try asking… |
 | --- | --- | --- |
+| Own a business outcome with AI agents | [one-person-company](skills/one-person-company/SKILL.md) | “Help me run this business outcome with clear measures, bounded initiatives, and durable operating records.” |
 | Stop repeating preferences and decisions | [remember](skills/remember/SKILL.md) | “Remember that I want drafts before anything is published.” |
 | Turn a ticket into a verified release | [software-factory](skills/software-factory/SKILL.md) | “Take this ticket through implementation, review, CI, and live verification.” |
 | Learn which marketing ideas work | [marketing-factory](skills/marketing-factory/SKILL.md) | “Design a bounded experiment for this offer and define how we'll judge it.” |

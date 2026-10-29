@@ -1,8 +1,9 @@
 {
   "name": "jstack",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "repository": "https://github.com/iamjulio/jstack",
   "skills": [
+    {"name": "one-person-company", "path": "skills/one-person-company", "summary": "Own a business outcome with AI agents, durable records, measured initiatives, and explicit authority."},
     {"name": "remember", "path": "skills/remember", "summary": "Durable memory with scope, provenance, correction, and recall."},
     {"name": "software-factory", "path": "skills/software-factory", "summary": "Tickets to reviewed code, CI, authorized release, live QA, and learning."},
     {"name": "marketing-factory", "path": "skills/marketing-factory", "summary": "Tickets to measured campaigns, bounded experiments, and learning."},

@@ -1,0 +1,4 @@
+interface:
+  display_name: "One Person Company"
+  short_description: "Run a business outcome with agents and clear authority"
+  default_prompt: "Use $one-person-company to establish or resume an operation with a clear outcome, durable records, measured initiatives and explicit authority."

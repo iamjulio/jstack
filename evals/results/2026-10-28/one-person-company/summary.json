@@ -1,0 +1,28 @@
+{
+  "method": "Independent no-effect application of the final skill instructions to two synthetic requests and supplied raw evidence. Candidate outputs saved before this assessment. No public evaluator cases read.",
+  "skill_tree_sha256": "ac0aaff451b670c8a2b29a1655e8b3fa6b323682b9726ee2d3ae726ddce1c308",
+  "results": [
+    {
+      "case": "company-resume-outreach",
+      "outcome": "pass in scoped synthetic exercise",
+      "artifact": "case-1.json",
+      "evidence": "No resend; A8 remains uncertain, original grant preserved, S9 is a separate ready loop, no fabricated execution or private-store write."
+    },
+    {
+      "case": "company-close-and-position",
+      "outcome": "pass in scoped synthetic exercise",
+      "artifact": "case-2.json",
+      "evidence": "Uses 98 paid active/day 11, distinguishes explicit stop request from achieved goal, keeps support closure unresolved, produces grounded untested headline and required review mechanism."
+    }
+  ],
+  "material_findings": [],
+  "interpretation_note": "The second request explicitly asks to close. The skill supports explicit stop/transfer as well as successful goal closure, so the candidate should honor wind-down preparation while refusing to misstate success or abandon unresolved support obligations. Failure to meet the charter does not prohibit a human-authorized stop.",
+  "limitations": [
+    "No real receipts, tracker, customer metrics, publishing, or operation store accessed.",
+    "No baseline or repeated runs; qualitative scenario exercise only.",
+    "No detailed S9 input supplied, so actual support completion cannot be exercised."
+  ],
+  "date": "2026-10-28",
+  "runtime": "Codex subagent with inherited session settings; exact model/runtime version and decoding settings were not separately recorded.",
+  "independence": "The applying agent did not author this skill; a separate agent reviewed the public-release content."
+}

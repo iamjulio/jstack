@@ -2,8 +2,11 @@
 
 Each skill is usable alone. For larger work, keep one outcome owner and one canonical ticket per work unit.
 
+Use `one-person-company` when the work spans an entire business outcome: it maintains the charter, shared resources, initiative decisions, customer experience, and operating records. Individual factory and specialist skills deliver the work within that operation's actual authority. The operating method does not require every skill or a particular acquisition channel.
+
 ```mermaid
 flowchart LR
+  O[Business outcome and charter] --> Q
   Q[Ticket and acceptance criteria] --> F[Software or marketing factory]
   F --> W[Versioned work]
   W --> E[Independent evaluation]
@@ -15,6 +18,7 @@ flowchart LR
 
 | Skill | Owns | Hands back |
 | --- | --- | --- |
+| one-person-company | Outcome charter, economics, customer experience, resources, initiative decisions | Durable operating state, measured priorities, and bounded handoffs |
 | scrum-master | Readiness, decomposition, capacity, sprint feedback | Testable stories with owners and dependencies |
 | software-factory | Code delivery and release evidence | Reviewed revision, CI results, release identity, QA evidence |
 | marketing-factory | Hypothesis, experiment, outcome measurement | Artifact revision, exposure window, result and limitations |
