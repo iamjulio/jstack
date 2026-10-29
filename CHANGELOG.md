@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.3.2 — 2026-10-29
+
+- Reuse established public/admin hosts for subsequent pages and preserve shared-site neighbors and app mounts.
+- Bind complete-site composition to its original release baseline so a later plan cannot erase a concurrent update.
+- Verify plain visitor URLs and apex homepages separately from fresh query/path probes; distinguish DNS, certificate and CDN cache failures.
+- Add synthetic regression cases for stale public caches, stale admin composition and scoped publishing routes.
+
 ## 0.3.1 — 2026-10-29
 
 - Prioritize a project repository when creating a publisher.

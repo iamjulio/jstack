@@ -1,0 +1,55 @@
+{
+  "reviewedOn": "2026-10-29",
+  "skill": "web-publisher",
+  "instructionHashes": {
+    "SKILL.md": "a10704a239ea2c4a21b2d98baf4cd4d6e67101dabac7e97820e8dd0b2bfa1af0",
+    "references/verification.md": "91fd376c89df9d640b07904681df7b5a89d7104bc27dcb81f10e06cd7b42ab92"
+  },
+  "method": "Independent applying agent received only the skill/relevant references, two synthetic requests and raw evidence. The author reviewed its actual artifacts against the public cases afterward. Candidate re-read the final instruction revision before recording hashes.",
+  "candidateSettings": "Inherited caller model/settings; exact runtime/model and decoding settings were not separately recorded.",
+  "permittedEffects": "Read the supplied instruction files and write decision artifacts in a temporary directory. No network, accounts, repositories or production resources changed.",
+  "artifactsSanitization": "Only the temporary instruction-source path was changed to its repository-relative spelling in these public copies. Scenario hosts are fictitious.",
+  "cases": [
+    {
+      "id": "web-canonical-negative-cache",
+      "artifact": "task-a.md",
+      "checks": [
+        {
+          "result": "pass",
+          "evidence": "Decision selects coordinated intended r9 redeployment; plain canonical and apex cached404s keep acceptance open despite successful query/alias/path probes."
+        },
+        {
+          "result": "pass",
+          "evidence": "Keeps correct DNS/bindings/certificates and distinguishes the stale CDN response; records expected prior release, immutable artifact and shared claim."
+        },
+        {
+          "result": "pass",
+          "evidence": "Requires plain roots, exact body hashes, redirects with encoded query and preserved siblings after the unexecuted repair."
+        }
+      ]
+    },
+    {
+      "id": "web-stale-admin-composition",
+      "artifact": "task-b.md",
+      "checks": [
+        {
+          "result": "pass",
+          "evidence": "Rejects the r7 folder despite an r8 local receipt because it omits the released reports page."
+        },
+        {
+          "result": "pass",
+          "evidence": "Recomposes from complete verified r8 and preserves unowned path set/bytes and API mounts before preparation."
+        },
+        {
+          "result": "pass",
+          "evidence": "Binds plan/promotion to original composition baseline under shared claim and treats rollback as complete-site scope."
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Two qualitative synthetic applications, not a complete evaluation-catalog run or comparative model benchmark.",
+    "Router established-host case was added but not independently executed in this run.",
+    "No actual hosting release, identity flow, DNS refresh or provider fencing was exercised."
+  ]
+}

@@ -10,6 +10,14 @@ Merge or rebase the intended update against the current release branch using the
 
 Use normal fast-forward pushes or explicit compare-and-swap updates. On a rejected push, fetch and inspect what changed. Disjoint updates can be merged with a bounded retry; same-site content/policy conflicts need deliberate integration. Do not retry an identical stale release until it overwrites the winner. Reconcile a lost push response by reading the remote ref before creating another commit or retrying.
 
+## Pages sharing a site
+
+Record a page's destination namespace, owned file manifest and baseline release. A path-aware adapter may compose disjoint page updates against the latest complete site under its shared claim, provided it detects same-path drift and prevents overlapping ownership. Do not assume a path option exists for every audience or adapter.
+
+For an adapter that accepts only complete-site output, copy the current archive in an isolated checkout, replace only the intended page's owned files, and verify untouched sibling bytes. Preserve existing routing, backend mounts and access configuration. Bind the prepared release to the same baseline used for composition. If the live/shared receipt advances, inspect the competing change and rebuild before preparing again; merely accepting the new receipt for an old composed folder can silently erase a sibling update.
+
+Save the integrated source revision, base release/provider version, artifact digest and preservation results in the existing project receipt. A source push alone does not establish a deployed page. Rollback of a complete site also affects its other pages and requires that intended scope.
+
 ## Deployment coordination
 
 Serialize promotion for every shared mutable resource. A per-site claim is sufficient only if sites do not also mutate shared authentication, DNS, routing or project configuration; otherwise use an environment/project claim. Source editing and local builds can remain parallel.

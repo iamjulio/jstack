@@ -10,8 +10,10 @@
 - Authorization reference and action limits:
 - Deployment receipt and completion time:
 - Public URLs and restricted route classes:
+- Page namespace/owned files, composition baseline and preserved siblings/app mounts:
 - Access topology and alternate hostname inventory:
 - Verification evidence (identity class, route, status, body assertion, time):
+- Plain visitor URLs, fresh query variants and canonical-host redirects (including path/query):
 - Checks not executed and prerequisites:
 - Prior release and rollback mechanism:
 - Recovery rehearsal evidence:

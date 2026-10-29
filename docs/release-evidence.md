@@ -1,5 +1,14 @@
 # Release evidence
 
+## 0.3.2 — Established-host publishing and cache-aware acceptance
+
+Prepared October 29, 2026. Public guidance now reuses established providers/hosts, preserves shared-site siblings and app mounts, binds complete-site preparation to its composition baseline, and checks plain visitor/apex URLs independently from fresh query/path probes. Real account bindings and operational receipts remain outside the public suite.
+
+- Eight-skill structure/reference/disclosure validation and official validation of the two changed skill entrypoints pass. All 12 existing installer/catalog/package fixture tests pass; all eight archives build. No publishing executable or cloud adapter changed in this release.
+- An independent applying agent used the final instruction hashes on two synthetic requests: cached canonical/apex 404s with working query variants; and a stale complete admin folder after a concurrent sibling release. The actual outputs satisfy six reviewed decision checks. See [candidate artifacts, final hashes and assessment](../evals/results/2026-10-29/publishing/report.json).
+- Three regression cases were added; the catalog now contains 35 cases. The new router case and complete catalog were not independently run. These two applications are qualitative workflow checks, not a model benchmark or proof of live cloud/access-control correctness. Exact model/runtime settings were not separately recorded.
+- The provider-specific cache/domain references were rechecked against primary documentation on October 29, 2026. No live site, DNS, identity policy, private catalog, account or publishing grant is included in the package or changed by this validation. GitHub CI is a separate check on the published commit.
+
 ## 0.3.0 — Public and private routing
 
 Prepared October 28, 2026. Added the eighth skill, `jstack`, with metadata-first discovery, verified scoped selection, shared-limit handoffs, and bounded chain recovery. The public package contains only public routing metadata and fictitious private configuration examples.
