@@ -2,6 +2,9 @@
 
 - State: prepared / deployed / live verified / contained / rolled back
 - Repository and commit:
+- Integration branch/base, merge outcome, and rebuilt artifact revision:
+- Shared deployment claim and expected prior provider release:
+- Repository artifact/receipt reference and uncertain-operation journal:
 - Artifact digest and manifest:
 - Environment and verified execution identity:
 - Authorization reference and action limits:

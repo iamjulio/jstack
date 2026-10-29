@@ -14,7 +14,7 @@
       "source": {
         "kind": "repository",
         "reference": "https://github.com/iamjulio/jstack",
-        "revision": "v0.3.0",
+        "revision": "v0.3.1",
         "entrypoint_sha256": "e69f40dfc408f86051a7624540fb33179cea8f27a8e3968320490ce498e3b06d"
       }
     },
@@ -31,7 +31,7 @@
       "source": {
         "kind": "repository",
         "reference": "https://github.com/iamjulio/jstack",
-        "revision": "v0.3.0",
+        "revision": "v0.3.1",
         "entrypoint_sha256": "36c2ed3786e51888bd306609e1256d73364aae52ee822d0b05ec1564d38b66d1"
       }
     },
@@ -48,7 +48,7 @@
       "source": {
         "kind": "repository",
         "reference": "https://github.com/iamjulio/jstack",
-        "revision": "v0.3.0",
+        "revision": "v0.3.1",
         "entrypoint_sha256": "ef46f6d61345f5de0131878efa060e527de48fdc716339d81f6987d89e07923f"
       }
     },
@@ -65,7 +65,7 @@
       "source": {
         "kind": "repository",
         "reference": "https://github.com/iamjulio/jstack",
-        "revision": "v0.3.0",
+        "revision": "v0.3.1",
         "entrypoint_sha256": "0275aea3f69cdb44ba13b36bf9687dd31868e913036597dbd88a0b6b10d8be6b"
       }
     },
@@ -82,8 +82,8 @@
       "source": {
         "kind": "repository",
         "reference": "https://github.com/iamjulio/jstack",
-        "revision": "v0.3.0",
-        "entrypoint_sha256": "0e542c8e35dd6d5d2b4522b5b0d575da90afc3e5e5cea785ebe9ef8cf077a259"
+        "revision": "v0.3.1",
+        "entrypoint_sha256": "4ea487d97723d7aef6bf7de60d67a1b9e540a3dbd5822f1a2b2a453100fe07c8"
       }
     },
     {
@@ -99,7 +99,7 @@
       "source": {
         "kind": "repository",
         "reference": "https://github.com/iamjulio/jstack",
-        "revision": "v0.3.0",
+        "revision": "v0.3.1",
         "entrypoint_sha256": "ae1e713ced597a2c1a9a74e128d0c2ed21e83c901ae10ffec667c49c0de26425"
       }
     },
@@ -116,7 +116,7 @@
       "source": {
         "kind": "repository",
         "reference": "https://github.com/iamjulio/jstack",
-        "revision": "v0.3.0",
+        "revision": "v0.3.1",
         "entrypoint_sha256": "4314705a636b87be21cb494eca9e78c867cef2145966b0987d59e9984699d8ca"
       }
     }

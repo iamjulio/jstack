@@ -3,6 +3,11 @@
 schema_version: 1
 repository: "owner/repository"
 release_ref: "main"
+artifact_repository_reference: "private-release-artifacts-or-configured-object-store"
+coordination:
+  environment_claim_reference: "shared-ci-concurrency-group-or-remote-lease"
+  prior_release_reference: "expected-current-provider-release"
+  recovery_record_reference: "durable-pending-operation-receipt"
 environment: "staging"
 build:
   command: "project-specific build command"

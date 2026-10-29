@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.3.1 — 2026-10-29
+
+- Prioritize a project repository when creating a publisher.
+- Specify source integration, shared deployment coordination, stale-release checks and crash/uncertain-write recovery for concurrent agents.
+
 ## 0.3.0 — 2026-10-28
 
 - Added `jstack`, a router for the public suite and explicitly configured private catalogs, with scope-aware selection, dependency handoffs, and bounded chain recovery.

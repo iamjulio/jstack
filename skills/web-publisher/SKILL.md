@@ -1,6 +1,6 @@
 ---
 name: web-publisher
-description: "Publish and maintain static websites from GitHub through private S3 and CloudFront, with verified access control for admin pages and release rollback. Use for hosting, deployment, protected static content, and live publishing checks."
+description: "Create and maintain repository-backed static publishers, with coordinated releases, verified access control for admin pages, and rollback. Use for hosting, site deployment, protected static content, and publishing recovery."
 ---
 
 # Web Publisher
@@ -9,7 +9,9 @@ Turn a repository revision into a reproducible release with working URLs, protec
 
 ## Establish the publishing contract
 
-Read the existing repository, build command, deployment configuration, domains, cloud account identity, and authorization. Discover available connectors or CLIs rather than inventing tool names. Reuse a working pipeline when it meets the request.
+Start with the repository. Reuse the intended project/publisher repository before creating cloud resources or an ad hoc uploader. If none exists, establish a repository with appropriate visibility and a release branch as part of the requested publisher setup; restricted content requires private source/artifact storage. Record source, build and deployment ownership even when those live in different repositories. A temporary output folder is not the publishing system of record.
+
+Read the existing repository instructions, build command, deployment configuration, domains, cloud account identity, and authorization. Discover available connectors or CLIs rather than inventing tool names. Reuse a working pipeline when it meets the request. Read [repository coordination](references/repository-coordination.md) when creating or changing the pipeline, integrating source changes, or publishing with multiple agents.
 
 Record the actual repository/ref, output directory, environment, public and restricted routes, permitted identities, budget, deployment grant, and previous release. Use [the profile template](assets/publishing-profile.yaml) if no equivalent exists. Keep real profiles and credentials outside a public skill repository. A site request can authorize preparing a release; use existing session authorization to determine whether its deployment is also included.
 
@@ -19,7 +21,7 @@ Before cloud changes, choose the topology using [architecture](references/archit
 
 1. Build from the intended commit using pinned dependencies. Check generated files, links, mobile layout, accessibility basics, 404 behavior, and exposed configuration. Public build output must exclude restricted documents, source maps containing private data, credentials, and server-only configuration. A public source repository cannot keep committed admin content confidential.
 2. Produce the reviewable release artifact and manifest. Separate public assets from admin assets; use distinct buckets/distributions when that simplifies the boundary. Configure least-privilege deployment identity and an explicit rollback target. Follow [deployment](references/deployment.md) for AWS, GitHub OIDC, caches, and rollback.
-3. Apply the authorized release and wait for provider completion. Reconcile remote state before retrying a timed-out write; do not repeat DNS, resource creation, or publication on uncertain outcomes. Stop dependent changes after a second unresolved failure and report the evidence needed to recover.
+3. Apply the authorized release through the repository's shared deployment coordinator and wait for provider completion. Record the expected prior release and refuse stale promotion. A local directory lock does not coordinate other worktrees or machines. Reconcile remote state before retrying a timed-out write; do not repeat DNS, resource creation, or publication on uncertain outcomes. Stop dependent changes after a second unresolved failure and report the evidence needed to recover.
 4. Run [live verification](references/verification.md). Inspect actual response bodies as well as status codes. Test a permitted identity, a denied identity, a clean anonymous session, alternate hostnames, direct object URLs, protected assets, and warm caches. Verify the deployed commit/build identifier.
 5. Record the revision, deployment receipt, URLs, verification results, actual resource changes, cost assumptions, rollback instructions, and remaining gaps. Use [the release receipt](assets/release-receipt.md). Say "prepared", "deployed", or "live verified" according to the evidence. A passing build alone does not establish live success.
 
