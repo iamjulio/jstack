@@ -44,6 +44,31 @@ def catalog(root=ROOT):
     return data
 
 
+def routing_catalog(root, data):
+    """Normalize public route metadata; the orchestrator is never a leaf route."""
+    entries = []
+    for item in data['skills']:
+        if item['name'] == 'jstack':
+            continue
+        entrypoint = root / item['path'] / 'SKILL.md'
+        entries.append({
+            'id': item['name'], 'name': item['name'], 'description': item['summary'],
+            'scope': {'kind': 'global', 'id': '*'},
+            'skill_path': '../' + item['path'] + '/SKILL.md',
+            'owner': 'jstack contributors',
+            'source': {'kind': 'repository', 'reference': data['repository'],
+                       'revision': 'v' + data['version'],
+                       'entrypoint_sha256': hashlib.sha256(entrypoint.read_bytes()).hexdigest()},
+        })
+    return {'catalog_version': 1, 'entries': entries}
+
+
+def check_routing_catalog(root, data):
+    path = root / 'routes/catalog.json'
+    if json.loads(path.read_text()) != routing_catalog(root, data):
+        raise Invalid('Public routing catalog is stale; regenerate with the catalog command')
+
+
 def files_under(path):
     for parent, dirs, names in os.walk(path, followlinks=False):
         dirs[:] = sorted(d for d in dirs if d not in IGNORED)
@@ -94,10 +119,12 @@ def frontmatter(file):
 
 def check(root=ROOT, deny_file=None):
     data = catalog(root)
+    check_routing_catalog(root, data)
     errors = []
     if (root / '.git').exists():
-        tracked = subprocess.run(['git', '-C', str(root), 'ls-files', '-z'],
-                                 check=True, capture_output=True).stdout.decode().split('\0')
+        tracked = subprocess.run(['git', '--no-optional-locks', '-c', 'core.fsmonitor=false',
+                                  '-C', str(root), 'ls-files', '-z'],
+                                 check=True, capture_output=True, timeout=10).stdout.decode().split('\0')
         for name in filter(None, tracked):
             path = Path(name)
             if (any(part in IGNORED - {'.git'} for part in path.parts)
@@ -239,6 +266,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     sub = parser.add_subparsers(dest='command', required=True)
     sub.add_parser('list', help='Show available skills')
+    sub.add_parser('catalog', help='Print normalized public routing metadata as JSON')
     validate = sub.add_parser('check', help='Validate structure and common disclosure patterns')
     validate.add_argument('--deny-file', help='Private newline-separated regex patterns; never committed')
     for command in ('install', 'bundle'):
@@ -260,6 +288,8 @@ def main():
         if args.command == 'list':
             for item in data['skills']:
                 print(f"{item['name']:20} {item['summary']}")
+        elif args.command == 'catalog':
+            print(json.dumps(routing_catalog(ROOT, data), indent=2))
         elif args.command == 'check':
             check(deny_file=args.deny_file)
             print(f"PASS: {len(data['skills'])} skills; structure, references, metadata, disclosure patterns, eval catalog")
@@ -284,7 +314,7 @@ def main():
                 if not case:
                     raise Invalid('Unknown evaluation case')
                 print(json.dumps({k: case[k] for k in ('id', 'skill', 'request', 'evidence')}, indent=2))
-    except (Invalid, OSError, ValueError, KeyError) as exc:
+    except (Invalid, OSError, ValueError, KeyError, subprocess.SubprocessError) as exc:
         print(f'ERROR: {exc}', file=sys.stderr)
         return 1
     return 0

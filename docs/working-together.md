@@ -2,6 +2,8 @@
 
 Each skill is usable alone. For larger work, keep one outcome owner and one canonical ticket per work unit.
 
+Use `jstack` to select a route when the request spans capabilities or the right entrypoint is unclear. It can combine public skills with explicitly configured private specialists. Explicit selection wins; otherwise relevant project, organization, or personal scope takes precedence over a generic fallback. [Routing setup](router.md) keeps private discovery metadata outside this public repository.
+
 Use `one-person-company` when the work spans an entire business outcome: it maintains the charter, shared resources, initiative decisions, customer experience, and operating records. Individual factory and specialist skills deliver the work within that operation's actual authority. The operating method does not require every skill or a particular acquisition channel.
 
 ```mermaid
@@ -18,6 +20,7 @@ flowchart LR
 
 | Skill | Owns | Hands back |
 | --- | --- | --- |
+| jstack | Route selection, scoped handoffs, dependency order, and chain recovery | The smallest useful workflow, accepted artifacts, and the next accountable action |
 | one-person-company | Outcome charter, economics, customer experience, resources, initiative decisions | Durable operating state, measured priorities, and bounded handoffs |
 | scrum-master | Readiness, decomposition, capacity, sprint feedback | Testable stories with owners and dependencies |
 | software-factory | Code delivery and release evidence | Reviewed revision, CI results, release identity, QA evidence |

@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.3.0 — 2026-10-28
+
+- Added `jstack`, a router for the public suite and explicitly configured private catalogs, with scope-aware selection, dependency handoffs, and bounded chain recovery.
+- Added a versioned catalog/profile contract, public routing metadata with entrypoint hashes, catalog generation and drift checks, and synthetic routing cases.
+- Kept existing specialists independently usable; private configuration and skill contents stay outside the public package.
+
 ## 0.2.0 — 2026-10-28
 
 - Added `one-person-company`: business outcome ownership, persistent operating records, parallel delivery loops, measured initiatives, customer payoff, and scoped autonomy.

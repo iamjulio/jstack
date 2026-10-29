@@ -2,7 +2,7 @@
 
 **Give your AI agent a better way to work.**
 
-Seven practical skills for running a business with AI agents, remembering what matters, shipping software, running marketing experiments, publishing websites, planning sprints, and buying ads. Use one today or connect them into a delivery loop.
+A router and seven focused skills for running a business with AI agents, remembering what matters, shipping software, running marketing experiments, publishing websites, planning sprints, and buying ads. Use one directly, or let `jstack` choose and chain the capabilities needed for your outcome.
 
 Built by [Julio](https://github.com/iamjulio). Free to use, adapt, and share under the [MIT license](LICENSE).
 
@@ -10,6 +10,7 @@ Built by [Julio](https://github.com/iamjulio). Free to use, adapt, and share und
 
 | You want to… | Start here | Try asking… |
 | --- | --- | --- |
+| Choose and connect the right workflows | [jstack](skills/jstack/SKILL.md) | “Use jstack to prepare this launch, using the right public and configured private skills.” |
 | Own a business outcome with AI agents | [one-person-company](skills/one-person-company/SKILL.md) | “Help me run this business outcome with clear measures, bounded initiatives, and durable operating records.” |
 | Stop repeating preferences and decisions | [remember](skills/remember/SKILL.md) | “Remember that I want drafts before anything is published.” |
 | Turn a ticket into a verified release | [software-factory](skills/software-factory/SKILL.md) | “Take this ticket through implementation, review, CI, and live verification.” |
@@ -26,17 +27,24 @@ Clone the repo and choose one skill. Python 3.10+ is needed for the included too
 git clone https://github.com/iamjulio/jstack.git
 cd jstack
 python3 scripts/jstack.py list
-python3 scripts/jstack.py install remember --host codex
+python3 scripts/jstack.py install --all --host codex
 ```
 
 Use `--host claude` for Claude Code, or choose a project destination:
 
 ```sh
 python3 scripts/jstack.py install scrum-master --dest /path/to/project/.agents/skills
-python3 scripts/jstack.py install --all --host codex
+python3 scripts/jstack.py install jstack --host claude
 ```
 
 The installer copies skills and refuses to replace any existing installation. Generic names such as `remember` may already be installed: compare versions and choose a separate destination before changing anything. Restart or reload your agent if it does not discover the skill immediately. Other agents can use the `SKILL.md` folders with their own supported installation method.
+
+The router can also use a verified suite checkout and explicitly configured private catalogs; its archive does not bundle the other skills. [Configure public and private routing](docs/router.md), then try:
+
+```text
+Use $jstack to prepare a landing-page experiment and paused ads.
+Use the existing project queue. Keep publication and activation as drafts.
+```
 
 Prefer an uploadable file? Download an individual `.skill` archive from [Releases](https://github.com/iamjulio/jstack/releases), when a release is available, or build one locally:
 

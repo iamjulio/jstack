@@ -1,0 +1,3 @@
+The saved organization route is unresolved because its configured private catalog is unavailable. I retained that dependency and prepared a generic local ads checklist using the verified public-suite:ad-buying v0.3.0 reference. This is labeled fallback preparation, with account, currency, conversion definition, saved receipts and remaining budget left unknown.
+
+No account-specific route was executed, guessed account selected, paused entity created, live delivery edited or spend incurred. The next acceptance checkpoint is restoration of the intended scoped catalog and verification of the exact account identity and current saved campaign state. The organization owner supplies that configuration; only then can the affected ads work resume.

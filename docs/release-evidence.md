@@ -1,5 +1,16 @@
 # Release evidence
 
+## 0.3.0 — Public and private routing
+
+Prepared October 28, 2026. Added the eighth skill, `jstack`, with metadata-first discovery, verified scoped selection, shared-limit handoffs, and bounded chain recovery. The public package contains only public routing metadata and fictitious private configuration examples.
+
+- Public package, reference, privacy-pattern, and official router-format validation pass.
+- Twelve installer/catalog/package fixture tests pass, including source-drift detection and excluding the router from leaf routes.
+- An independent agent applied the router to seven synthetic tasks covering single-skill work, multi-skill dependencies, matching private scope, missing catalogs, explicit public selection, circular dependencies/shared budgets, and changed source pins. Routing and authority checks pass; unavailable live outcomes remain inconclusive.
+- The [actual candidate outputs and assessment](../evals/results/2026-10-28/router/report.json) retain the tested instruction hashes and limitations. No live provider or business operation was exercised.
+
+The public catalog now contains 30 regression cases across eight skills. The seven new forward applications are not a repeated model benchmark or a run of that complete catalog. Exact model/runtime settings were not separately recorded. Private catalogs, configured paths, credentials, and real business context are excluded from the public artifacts.
+
 ## 0.2.0 — One Person Company
 
 Prepared October 28, 2026. Added the seventh independently installable skill, preserving the reusable operating methodology and three references while excluding private company profiles and grants.

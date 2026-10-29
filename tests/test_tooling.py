@@ -90,6 +90,30 @@ class ToolingTests(unittest.TestCase):
         with self.assertRaises(js.Invalid):
             js.catalog(self.source)
 
+    def routing_data(self):
+        return {'version': '0.3.0', 'repository': 'https://example.com/skills',
+                'skills': [dict(self.items[0], summary='Alpha work'),
+                           {'name': 'jstack', 'path': 'skills/jstack', 'summary': 'Router'}]}
+
+    def test_route_catalog_excludes_recursion_and_resolves_companion(self):
+        data = js.routing_catalog(self.source, self.routing_data())
+        self.assertEqual([e['name'] for e in data['entries']], ['alpha'])
+        entry = data['entries'][0]
+        catalog_folder = self.source / 'routes'
+        self.assertEqual((catalog_folder / entry['skill_path']).resolve(),
+                         (self.source / 'skills/alpha/SKILL.md').resolve())
+        self.assertEqual(entry['scope'], {'kind': 'global', 'id': '*'})
+
+    def test_route_catalog_detects_changed_entrypoint_source(self):
+        folder = self.source / 'routes'
+        folder.mkdir()
+        data = self.routing_data()
+        (folder / 'catalog.json').write_text(json.dumps(js.routing_catalog(self.source, data)))
+        js.check_routing_catalog(self.source, data)
+        (self.source / 'skills/alpha/SKILL.md').write_text('changed instructions')
+        with self.assertRaises(js.Invalid):
+            js.check_routing_catalog(self.source, data)
+
     def test_bundle_publication_failure_cleans_only_its_own_files(self):
         output = self.base / 'bundles'
         real_open = Path.open

@@ -1,0 +1,124 @@
+{
+  "catalog_version": 1,
+  "entries": [
+    {
+      "id": "one-person-company",
+      "name": "one-person-company",
+      "description": "Own a business outcome with AI agents, durable records, measured initiatives, and explicit authority.",
+      "scope": {
+        "kind": "global",
+        "id": "*"
+      },
+      "skill_path": "../skills/one-person-company/SKILL.md",
+      "owner": "jstack contributors",
+      "source": {
+        "kind": "repository",
+        "reference": "https://github.com/iamjulio/jstack",
+        "revision": "v0.3.0",
+        "entrypoint_sha256": "e69f40dfc408f86051a7624540fb33179cea8f27a8e3968320490ce498e3b06d"
+      }
+    },
+    {
+      "id": "remember",
+      "name": "remember",
+      "description": "Durable memory with scope, provenance, correction, and recall.",
+      "scope": {
+        "kind": "global",
+        "id": "*"
+      },
+      "skill_path": "../skills/remember/SKILL.md",
+      "owner": "jstack contributors",
+      "source": {
+        "kind": "repository",
+        "reference": "https://github.com/iamjulio/jstack",
+        "revision": "v0.3.0",
+        "entrypoint_sha256": "36c2ed3786e51888bd306609e1256d73364aae52ee822d0b05ec1564d38b66d1"
+      }
+    },
+    {
+      "id": "software-factory",
+      "name": "software-factory",
+      "description": "Tickets to reviewed code, CI, authorized release, live QA, and learning.",
+      "scope": {
+        "kind": "global",
+        "id": "*"
+      },
+      "skill_path": "../skills/software-factory/SKILL.md",
+      "owner": "jstack contributors",
+      "source": {
+        "kind": "repository",
+        "reference": "https://github.com/iamjulio/jstack",
+        "revision": "v0.3.0",
+        "entrypoint_sha256": "ef46f6d61345f5de0131878efa060e527de48fdc716339d81f6987d89e07923f"
+      }
+    },
+    {
+      "id": "marketing-factory",
+      "name": "marketing-factory",
+      "description": "Tickets to measured campaigns, bounded experiments, and learning.",
+      "scope": {
+        "kind": "global",
+        "id": "*"
+      },
+      "skill_path": "../skills/marketing-factory/SKILL.md",
+      "owner": "jstack contributors",
+      "source": {
+        "kind": "repository",
+        "reference": "https://github.com/iamjulio/jstack",
+        "revision": "v0.3.0",
+        "entrypoint_sha256": "0275aea3f69cdb44ba13b36bf9687dd31868e913036597dbd88a0b6b10d8be6b"
+      }
+    },
+    {
+      "id": "web-publisher",
+      "name": "web-publisher",
+      "description": "Publish static sites with private origins and verified admin access.",
+      "scope": {
+        "kind": "global",
+        "id": "*"
+      },
+      "skill_path": "../skills/web-publisher/SKILL.md",
+      "owner": "jstack contributors",
+      "source": {
+        "kind": "repository",
+        "reference": "https://github.com/iamjulio/jstack",
+        "revision": "v0.3.0",
+        "entrypoint_sha256": "0e542c8e35dd6d5d2b4522b5b0d575da90afc3e5e5cea785ebe9ef8cf077a259"
+      }
+    },
+    {
+      "id": "scrum-master",
+      "name": "scrum-master",
+      "description": "Clear stories, calibrated estimates, realistic sprints, and useful retros.",
+      "scope": {
+        "kind": "global",
+        "id": "*"
+      },
+      "skill_path": "../skills/scrum-master/SKILL.md",
+      "owner": "jstack contributors",
+      "source": {
+        "kind": "repository",
+        "reference": "https://github.com/iamjulio/jstack",
+        "revision": "v0.3.0",
+        "entrypoint_sha256": "ae1e713ced597a2c1a9a74e128d0c2ed21e83c901ae10ffec667c49c0de26425"
+      }
+    },
+    {
+      "id": "ad-buying",
+      "name": "ad-buying",
+      "description": "Evidence-backed paid media, paused builds, and bounded optimization.",
+      "scope": {
+        "kind": "global",
+        "id": "*"
+      },
+      "skill_path": "../skills/ad-buying/SKILL.md",
+      "owner": "jstack contributors",
+      "source": {
+        "kind": "repository",
+        "reference": "https://github.com/iamjulio/jstack",
+        "revision": "v0.3.0",
+        "entrypoint_sha256": "4314705a636b87be21cb494eca9e78c867cef2145966b0987d59e9984699d8ca"
+      }
+    }
+  ]
+}

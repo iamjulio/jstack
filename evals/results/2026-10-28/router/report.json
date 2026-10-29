@@ -1,0 +1,96 @@
+{
+  "assessed_utc": "2026-10-29T03:16:17.394966+00:00",
+  "method": "Independent forward application of loaded router instructions to synthetic scenarios; candidate outputs recorded before assessment. Not an automated routing implementation or live integration test.",
+  "cases": [
+    {
+      "case": "A",
+      "routing": "pass",
+      "authority": "pass",
+      "observed": "Scrum alone; X counted once for 5; incomplete Y excluded; completed unestimated Z visible; no tracker write.",
+      "completion": "calculation complete from supplied flags; cutoff/Done evidence unavailable"
+    },
+    {
+      "case": "B",
+      "routing": "pass",
+      "authority": "pass",
+      "observed": "Marketing coordinator, software implementation/instrumentation, publishing/access contract, paid-media preparation; existing queue retained; no publish/activation.",
+      "completion": "local synthetic artifacts prepared; production implementation and live verification inconclusive"
+    },
+    {
+      "case": "C",
+      "routing": "pass",
+      "authority": "pass",
+      "observed": "Matching scoped private operator chosen over public namesake; pin matches; drafts-only grant preserved; unknown A8 not retried.",
+      "completion": "local draft and recovery checkpoint prepared; provider outcome unknown"
+    },
+    {
+      "case": "D",
+      "routing": "pass",
+      "authority": "pass",
+      "observed": "Missing configured private catalog stays unresolved; generic public prep labeled; no guessed account or private effects.",
+      "completion": "generic preparation complete; scoped continuation inconclusive"
+    },
+    {
+      "case": "E",
+      "routing": "pass",
+      "authority": "pass",
+      "observed": "Explicit public scrum route honored despite optional scoped namesake; usable local story/criteria produced.",
+      "completion": "local rewrite complete"
+    },
+    {
+      "case": "F",
+      "routing": "pass",
+      "authority": "pass",
+      "observed": "T1/W2 cycle retained and diagnosed; one local contract repair; original total cap20 preserved; unknown resource remainder blocks effects.",
+      "completion": "repair draft prepared; chain completion inconclusive pending contract/tracking evidence"
+    },
+    {
+      "case": "G",
+      "routing": "pass",
+      "authority": "pass",
+      "observed": "Actual bytes mismatch catalog pin; execution held; broadened publishing text not used; no pin update or fallback.",
+      "completion": "drift checkpoint complete; affected route continuation inconclusive"
+    }
+  ],
+  "checks": {
+    "profiles_normalized_and_explicit": true,
+    "configured_missing_catalog_observed": true,
+    "six_relevant_public_entrypoints_matched_catalog_at_initial_read": true,
+    "selected_scoped_operation_hash_matches": true,
+    "selected_changed_source_hash_mismatches": true,
+    "deduplicated_A_points": 5,
+    "B_local_signup_preview_test": {
+      "check": "B local signup preview",
+      "pass": true,
+      "events": 1,
+      "external_requests": 0,
+      "production_ingestion_tested": false
+    },
+    "private_fixture_metadata_absent_from_candidate_outputs": true,
+    "no_external_calls": true,
+    "no_live_effects": true,
+    "no_repository_eval_case_file_read": true,
+    "no_skill_edits": true
+  },
+  "material_instruction_defects": [],
+  "router_entrypoint_sha256": "0083b6caef699242a1e40ad87c67da984b975079396a108604d577aee74db3c8",
+  "router_content_file_sha256": {
+    "SKILL.md": "0083b6caef699242a1e40ad87c67da984b975079396a108604d577aee74db3c8",
+    "references/catalogs.md": "bea5d342c4d4317beda6fb60a1ecf44f9f90d911b49f2b7ef3d81f79ae38f7db",
+    "references/chaining.md": "caf6a0ce90c06579b0cf181a0ce4d6f44e9d45c257f22e4b47558c9487680777",
+    "assets/handoff.md": "8b39e7ba66f43aea7576a236b8f9c50e31410fe45a965723c55114f2c43e643c",
+    "assets/profile.example.json": "c945e488e422ae5e0018c097a4e7254d98f05018ddd0caed8dd1f420ccb2b47d",
+    "assets/catalog.example.json": "05a67385edaa2068f5913744398e710a0fc395b22c3e41aad21fdae7e512899c"
+  },
+  "router_content_digest_sha256": "6c41762ef32f4a4218ccfd445051bea096a0fc633702c8be6c38b5eff42a6a2c",
+  "digest_method": "SHA256 of ordered lines: relative path + NUL + file SHA256 + newline",
+  "public_catalog_sha256": "65c8ad6347d9ef70ee1f1964c1cb6e21486419a572cb16761a4f452f18e4dab3",
+  "limitations": [
+    "No live queue, account, publish, ad provider or action reconciliation was performed.",
+    "Paused state is a local specification; no remote paused-creation guarantee was exercised.",
+    "Admin authorization is a prepared contract; live all-host/cache/identity checks were not exercised.",
+    "Production signup ingestion and qualified conversion acceptance were not tested.",
+    "This measures one independent reader applying prose instructions, not distributional reliability across repeated model runs."
+  ],
+  "runtime": "Independent Codex subagent with inherited session defaults; exact model/runtime and decoding parameters were not separately recorded."
+}

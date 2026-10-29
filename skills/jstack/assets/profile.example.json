@@ -1,0 +1,17 @@
+{
+  "profile_version": 1,
+  "catalogs": [
+    {
+      "id": "public-suite",
+      "visibility": "public",
+      "path": "/path/to/jstack/routes/catalog.json",
+      "scope": {"kind": "global", "id": "*"}
+    },
+    {
+      "id": "private-work",
+      "visibility": "private",
+      "path": "./catalog.example.json",
+      "scope": {"kind": "global", "id": "*"}
+    }
+  ]
+}

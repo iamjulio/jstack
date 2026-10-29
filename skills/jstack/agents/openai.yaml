@@ -1,0 +1,4 @@
+interface:
+  display_name: "jstack"
+  short_description: "Route public and configured private skill workflows"
+  default_prompt: "Use $jstack to choose the right public or configured private skills and carry this outcome through its required handoffs and verification."

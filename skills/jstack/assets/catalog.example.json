@@ -1,0 +1,35 @@
+{
+  "catalog_version": 1,
+  "entries": [
+    {
+      "id": "studio-publishing",
+      "name": "studio-publisher",
+      "description": "Use the sample organization's established publication workflow.",
+      "scope": {"kind": "organization", "id": "sample-studio"},
+      "skill_path": "/path/to/private-skills/studio-publisher/SKILL.md",
+      "owner": "Example studio owner",
+      "source": {
+        "kind": "user-defined",
+        "reference": "example-private-source",
+        "revision": "reviewed-example-revision"
+      },
+      "aliases": ["studio publishing"],
+      "capabilities": ["publication", "release verification"]
+    },
+    {
+      "id": "portal-publishing",
+      "name": "web-publisher",
+      "description": "Publish the sample project's portal within its verified release scope.",
+      "scope": {"kind": "project", "id": "sample-portal"},
+      "skill_path": "/path/to/private-project/web-publisher/SKILL.md",
+      "owner": "Example portal owner",
+      "source": {
+        "kind": "repository",
+        "reference": "example-project-repository",
+        "revision": "reviewed-example-revision"
+      },
+      "aliases": ["portal release"],
+      "capabilities": ["static publishing", "access verification"]
+    }
+  ]
+}
