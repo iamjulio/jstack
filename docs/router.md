@@ -1,4 +1,4 @@
-# One entrypoint for public and private work
+# Let jstack choose the right skills
 
 `jstack` selects skills and connects their outputs. A sprint report can use `scrum-master` alone. A campaign may use marketing to define the experiment, software to instrument a page, publishing to verify its release, and ad buying for paid execution. Independent preparation can run in parallel; dependent effects wait for accepted inputs.
 
@@ -12,9 +12,21 @@ python3 scripts/jstack.py install --all --host codex
 
 Existing installations are preserved: the installer aborts on collisions. You can install only `jstack` and use catalog pointers to a checkout while keeping other installed skill variants intact. The router archive contains routing guidance and fictitious configuration examples; it does not contain the companion instructions or your private configuration.
 
-## Add your private skills
+## Try a task
 
-Keep private routing metadata in a private repository or local configuration folder. Follow the [profile/catalog contract](../skills/jstack/references/catalogs.md). Use an explicit profile for a task, or configure `~/.config/jstack/profile.json` with catalog pointers:
+After installing the public suite, give your agent a concrete outcome:
+
+```text
+Use $jstack to help me launch an online course about smartphone photography.
+Draft a landing-page outline, a two-week marketing test, and a way to measure
+email signups. Keep everything as drafts for me to review.
+```
+
+The router selects the skills needed and passes each result to the next step. You can start with an idea and a few constraints; no routing profile or existing ticket system is needed for this draft-only task. When work requires a connected service, the agent checks the available tools and permissions before taking action.
+
+## Optional: add your own private skills
+
+If you have custom skills for your business or projects, you can connect them alongside the public suite. Keep private routing metadata in a private repository or local configuration folder. Follow the [profile/catalog contract](../skills/jstack/references/catalogs.md). Use an explicit profile for a task, or configure `~/.config/jstack/profile.json` with catalog pointers:
 
 ```json
 {
@@ -43,9 +55,9 @@ Read summaries to choose a route, then only the selected instructions. Catalogs 
 ## Use and resume a chain
 
 ```text
-Use $jstack and my supplied routing profile to handle this project.
-Reuse its existing workflow and work record. Show the short route,
-then carry out the authorized steps and verify each dependency.
+Use $jstack to continue the online course launch we started.
+Check the completed drafts, show what remains, and work through the next steps.
+Keep anything that would go live ready for my review.
 ```
 
 The router keeps one outcome coordinator, explicit deliverable owners, shared resource limits, and revision-bound handoffs. It can work in one session; skill chaining does not require new chats or delegate messages. On resume it checks completed work and uncertain external effects before retrying or changing routes. It does not restart the chain, create duplicate work, or multiply its budget.

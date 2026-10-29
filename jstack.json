@@ -3,7 +3,7 @@
   "version": "0.3.0",
   "repository": "https://github.com/iamjulio/jstack",
   "skills": [
-    {"name": "jstack", "path": "skills/jstack", "summary": "Route and chain public and explicitly configured private skills with scoped handoffs."},
+    {"name": "jstack", "path": "skills/jstack", "summary": "Choose the right skills and connect them to complete your task."},
     {"name": "one-person-company", "path": "skills/one-person-company", "summary": "Own a business outcome with AI agents, durable records, measured initiatives, and explicit authority."},
     {"name": "remember", "path": "skills/remember", "summary": "Durable memory with scope, provenance, correction, and recall."},
     {"name": "software-factory", "path": "skills/software-factory", "summary": "Tickets to reviewed code, CI, authorized release, live QA, and learning."},

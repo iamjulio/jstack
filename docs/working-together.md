@@ -2,7 +2,9 @@
 
 Each skill is usable alone. For larger work, keep one outcome owner and one canonical ticket per work unit.
 
-Use `jstack` to select a route when the request spans capabilities or the right entrypoint is unclear. It can combine public skills with explicitly configured private specialists. Explicit selection wins; otherwise relevant project, organization, or personal scope takes precedence over a generic fallback. [Routing setup](router.md) keeps private discovery metadata outside this public repository.
+Use `jstack` when a task needs several skills or you are unsure where to start. For an online course launch, it can use marketing to plan a signup experiment, software to build the landing page, and publishing to put it online. Tell it the outcome, audience, and constraints; it chooses the skills needed. [See a starting example](router.md#try-a-task).
+
+If you already have custom workflows, you can also [add your own private skills](router.md#optional-add-your-own-private-skills). This is optional; the public suite works on its own.
 
 Use `one-person-company` when the work spans an entire business outcome: it maintains the charter, shared resources, initiative decisions, customer experience, and operating records. Individual factory and specialist skills deliver the work within that operation's actual authority. The operating method does not require every skill or a particular acquisition channel.
 

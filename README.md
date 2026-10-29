@@ -10,18 +10,18 @@ Built by [Julio](https://github.com/iamjulio). Free to use, adapt, and share und
 
 | You want to… | Start here | Try asking… |
 | --- | --- | --- |
-| Choose and connect the right workflows | [jstack](skills/jstack/SKILL.md) | “Use jstack to prepare this launch, using the right public and configured private skills.” |
-| Own a business outcome with AI agents | [one-person-company](skills/one-person-company/SKILL.md) | “Help me run this business outcome with clear measures, bounded initiatives, and durable operating records.” |
+| Plan work across several skills | [jstack](skills/jstack/SKILL.md) | “Use jstack to plan a landing page and a two-week marketing test for my new online course.” |
+| Own a business outcome with AI agents | [one-person-company](skills/one-person-company/SKILL.md) | “Help me run my freelance business with weekly priorities and clear measures of progress.” |
 | Stop repeating preferences and decisions | [remember](skills/remember/SKILL.md) | “Remember that I want drafts before anything is published.” |
 | Turn a ticket into a verified release | [software-factory](skills/software-factory/SKILL.md) | “Take this ticket through implementation, review, CI, and live verification.” |
-| Learn which marketing ideas work | [marketing-factory](skills/marketing-factory/SKILL.md) | “Design a bounded experiment for this offer and define how we'll judge it.” |
-| Publish a site with protected admin pages | [web-publisher](skills/web-publisher/SKILL.md) | “Plan an S3 and CloudFront site, with admin access that can't be bypassed.” |
+| Learn which marketing ideas work | [marketing-factory](skills/marketing-factory/SKILL.md) | “Plan a two-week test to see which message gets more email signups.” |
+| Publish a site with protected admin pages | [web-publisher](skills/web-publisher/SKILL.md) | “Help me publish my portfolio with a login-protected admin area.” |
 | Make the next sprint achievable | [scrum-master](skills/scrum-master/SKILL.md) | “Turn this backlog into clear stories and a realistic sprint.” |
 | Build and improve paid campaigns | [ad-buying](skills/ad-buying/SKILL.md) | “Review these results, then prepare the next test as paused ads.” |
 
-## Get started in two minutes
+## Install the skills
 
-Clone the repo and choose one skill. Python 3.10+ is needed for the included tools; the skill instructions themselves are Markdown.
+Clone the repo and install the suite. Python 3.10+ is needed for the included tools; the skill instructions themselves are Markdown.
 
 ```sh
 git clone https://github.com/iamjulio/jstack.git
@@ -39,14 +39,21 @@ python3 scripts/jstack.py install jstack --host claude
 
 The installer copies skills and refuses to replace any existing installation. Generic names such as `remember` may already be installed: compare versions and choose a separate destination before changing anything. Restart or reload your agent if it does not discover the skill immediately. Other agents can use the `SKILL.md` folders with their own supported installation method.
 
-The router can also use a verified suite checkout and explicitly configured private catalogs; its archive does not bundle the other skills. [Configure public and private routing](docs/router.md), then try:
+## Try your first task
+
+After installing, tell your agent what you want to accomplish. `jstack` chooses the skills needed and connects their work. For example:
 
 ```text
-Use $jstack to prepare a landing-page experiment and paused ads.
-Use the existing project queue. Keep publication and activation as drafts.
+Use $jstack to help me launch an online course about smartphone photography.
+Draft a landing-page outline, a two-week marketing test, and a way to measure
+email signups. Keep everything as drafts for me to review.
 ```
 
-Prefer an uploadable file? Download an individual `.skill` archive from [Releases](https://github.com/iamjulio/jstack/releases), when a release is available, or build one locally:
+Replace the example with your own idea, project, or business. Include any useful context, such as your audience, deadline, and budget. You can also ask for an individual skill directly using an example from the table above.
+
+The public suite is ready to use after installation. If you already have custom skills, [optional advanced routing](docs/router.md#optional-add-your-own-private-skills) lets you connect them too. When downloading only the router archive, install the companion skills you need separately.
+
+Prefer an uploadable file? Download an individual `.skill` archive from [Releases](https://github.com/iamjulio/jstack/releases), or build one locally:
 
 ```sh
 python3 scripts/jstack.py bundle --all
