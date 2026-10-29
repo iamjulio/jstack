@@ -1,0 +1,4 @@
+interface:
+  display_name: "Software Factory"
+  short_description: "Deliver tickets through verified software releases"
+  default_prompt: "Use $software-factory to deliver this ticket through implementation, checks, authorized release and live verification."

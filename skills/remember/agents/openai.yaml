@@ -1,0 +1,4 @@
+interface:
+  display_name: "Remember"
+  short_description: "Keep useful facts with scope and provenance"
+  default_prompt: "Use $remember to save or recall a durable fact in my configured private memory store."

@@ -1,0 +1,50 @@
+{
+  "state": "prepared; restricted release blocked; existing exposure uncontained",
+  "source": "supplied scenario only; no network calls or cloud changes",
+  "grant": "fix access boundary and deploy after checks; supplied in scenario",
+  "evidence": [
+    {
+      "url": "https://admin.example.com",
+      "identity": "permitted",
+      "observed": "Access login works; does not prove alternate-host protection"
+    },
+    {
+      "url": "https://d111example.cloudfront.net/admin/export.csv",
+      "identity": "anonymous after permitted cache warm-up",
+      "status": 200,
+      "body_assertion": "private marker present; supplied evidence of disclosure"
+    },
+    {
+      "target": "direct S3 GET",
+      "identity": "anonymous",
+      "observed": "denied; origin policy does not protect CDN viewers"
+    }
+  ],
+  "decision": "Do not promote restricted content or mark live verified. Contain existing bypass under the granted scope, then deploy the complete boundary after checks.",
+  "fix_plan": [
+    "Inventory all distribution behaviors, aliases, protected assets, rewrites and fallbacks; identify current cache and auth configuration.",
+    "Block unauthenticated access before cache lookup for every behavior capable of returning private bytes; maintain private S3/OAC. If a reliable verifier cannot be deployed, unpublish private bytes or disable their serving route while preserving public service.",
+    "For Access JWT verification validate signature, trusted algorithm, issuer, application audience, expiration and required identity on viewer requests; deny verifier errors and support key rotation. Restrict accepted hostnames as additional defense.",
+    "Disable shared caching of identity-dependent content, establish the restriction first, then invalidate exposed cached paths. Preserve access controls across content rollback.",
+    "Build/review exact artifact/configuration and run safe staging boundary checks before the authorized production change; reconcile asynchronous state and wait for completion."
+  ],
+  "verification_plan": [
+    "Permitted identity retrieves expected nonsecret test marker at protected custom-domain route.",
+    "Clean anonymous and denied signed-in identities cannot retrieve private body/asset bytes on custom domain, default CDN hostname, every alias and direct object URL.",
+    "Authorized warm-up followed by anonymous or denied requests still denies on all protected route classes.",
+    "Missing, malformed, expired and wrong-issuer/audience token cases deny without confidential error/fallback body.",
+    "Encoded/normalized paths, query variants, default behavior, SPA/error rewrites, downloads, dependent assets and any backend action retain authorization.",
+    "Read actual deployed revision/configuration, wait for propagation/invalidation, and rehearse prior content restoration without restoring permissive access policy."
+  ],
+  "not_executed": [
+    "repository/build inspection",
+    "cloud configuration read-back",
+    "containment deployment",
+    "cache invalidation",
+    "live verification",
+    "rollback rehearsal"
+  ],
+  "actual_resource_changes": [],
+  "next_owner": "publisher with target cloud/repository access",
+  "next_action": "inspect deployed auth/cache behaviors and implement containment; current receipt cannot assert containment or live success"
+}

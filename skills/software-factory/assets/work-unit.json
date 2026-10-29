@@ -1,0 +1,17 @@
+{
+  "contract_version": 1,
+  "id": null,
+  "dedupe_key": null,
+  "canonical_ticket_url": null,
+  "owner": null,
+  "outcome": null,
+  "acceptance": [],
+  "exclusions": [],
+  "dependencies": [],
+  "source_revision": null,
+  "authority_reference": null,
+  "evidence": {"tests": [], "reviews": [], "release": null, "live_qa": [], "limitations": []},
+  "effect_receipts": [],
+  "checkpoint": {"state": "draft", "updated_at": null, "completed": [], "remaining": [], "next_owner": null},
+  "feedback": {"metric": null, "baseline": null, "window": null, "result": null, "follow_up": null}
+}

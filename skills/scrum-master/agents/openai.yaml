@@ -1,0 +1,4 @@
+interface:
+  display_name: "Scrum Master"
+  short_description: "Ready stories and run evidence-backed sprints"
+  default_prompt: "Use $scrum-master to refine this backlog and propose a realistic sprint plan."

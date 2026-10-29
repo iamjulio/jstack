@@ -1,0 +1,13 @@
+{
+  "profile_version": 1,
+  "organization": null,
+  "accountable_owner": null,
+  "execution_identity": null,
+  "queue": {"provider": null, "project": null, "state_mapping": {}, "dedupe_field": null, "claim_mechanism": null},
+  "repository": {"remote": null, "base_branch": null, "required_checks": [], "review_policy": null},
+  "release": {"target": null, "mechanism": null, "revision_lookup": null, "rollback": null},
+  "qa": {"target": null, "safe_test_identity_reference": null, "acceptance_scenarios": []},
+  "authority": {"evidence_reference": null, "actions": [], "scope": null, "expires_at": null},
+  "limits": {"repair_attempts": 1, "time_minutes": null, "cost_ceiling": null, "currency": null},
+  "feedback": {"metric": null, "source": null, "baseline": null, "observation_window": null, "owner": null}
+}

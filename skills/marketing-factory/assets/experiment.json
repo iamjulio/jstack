@@ -1,0 +1,23 @@
+{
+  "contract_version": 1,
+  "id": null,
+  "dedupe_key": null,
+  "canonical_ticket_url": null,
+  "owner": null,
+  "audience": null,
+  "offer_reference": null,
+  "hypothesis": null,
+  "creative_revisions": [],
+  "claim_evidence": [],
+  "design": {"type": null, "control": null, "variants": [], "assignment_unit": null, "allocation": null},
+  "primary_metric": {"name": null, "numerator": null, "denominator": null, "source": null, "baseline": null, "minimum_useful_effect": null},
+  "window": {"start": null, "end": null, "timezone": null, "attribution": null, "conversion_lag": null, "sample_plan": null},
+  "guardrails": [],
+  "limits": {"spend_ceiling": null, "currency": null, "volume_ceiling": null},
+  "authority_reference": null,
+  "preregistered_decision_rule": null,
+  "revision_reviews": [],
+  "activation_receipts": [],
+  "measurement_checks": [],
+  "result": {"state": "draft", "counts": null, "cost": null, "effect": null, "uncertainty": null, "limitations": [], "decision": null, "next_owner": null, "follow_up": null}
+}

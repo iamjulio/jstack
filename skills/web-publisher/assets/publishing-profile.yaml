@@ -1,0 +1,29 @@
+# Copy into the target project's private configuration and fill from verified state.
+# References identify credentials; never put credential values in this file.
+schema_version: 1
+repository: "owner/repository"
+release_ref: "main"
+environment: "staging"
+build:
+  command: "project-specific build command"
+  output_directory: "dist"
+hosting:
+  public_provider: "aws-s3-cloudfront"
+  aws_region: "chosen-region"
+  public_bucket_reference: "configured-resource-reference"
+  public_distribution_reference: "configured-resource-reference"
+  public_hostname: "www.example.com"
+  admin_topology: "unpublished-until-configured"
+  admin_hostname: "admin.example.com"
+  restricted_artifact_directory: "separate-private-build"
+  identity_policy_reference: "configured-access-policy-reference"
+  alternate_hostnames: []
+deployment:
+  identity_reference: "configured-oidc-role-reference"
+  grant_reference: "human-request-or-standing-release-grant"
+  rollback_release_reference: "previous-known-good-release"
+budget:
+  monthly_limit: 0
+  currency: "USD"
+  traffic_assumptions: "estimate-before-provisioning"
+  pricing_checked_on: "YYYY-MM-DD"

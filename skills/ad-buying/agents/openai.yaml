@@ -1,0 +1,4 @@
+interface:
+  display_name: "Ad Buying"
+  short_description: "Analyze media and prepare verified paused ads"
+  default_prompt: "Use $ad-buying to review this account and prepare the next paid-media experiment."

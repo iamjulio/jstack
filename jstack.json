@@ -1,0 +1,13 @@
+{
+  "name": "jstack",
+  "version": "0.1.0",
+  "repository": "https://github.com/iamjulio/jstack",
+  "skills": [
+    {"name": "remember", "path": "skills/remember", "summary": "Durable memory with scope, provenance, correction, and recall."},
+    {"name": "software-factory", "path": "skills/software-factory", "summary": "Tickets to reviewed code, CI, authorized release, live QA, and learning."},
+    {"name": "marketing-factory", "path": "skills/marketing-factory", "summary": "Tickets to measured campaigns, bounded experiments, and learning."},
+    {"name": "web-publisher", "path": "skills/web-publisher", "summary": "Publish static sites with private origins and verified admin access."},
+    {"name": "scrum-master", "path": "skills/scrum-master", "summary": "Clear stories, calibrated estimates, realistic sprints, and useful retros."},
+    {"name": "ad-buying", "path": "skills/ad-buying", "summary": "Evidence-backed paid media, paused builds, and bounded optimization."}
+  ]
+}

@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+.DS_Store
+.venv/
+dist/
+.local/
+profiles/
+memory/
+.env
+.env.*
+!.env.example
+evals/runs/
+evidence/private/

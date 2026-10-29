@@ -1,0 +1,60 @@
+{
+  "exercise_only": true,
+  "external_effects_performed": false,
+  "ticket": "APP-42",
+  "receipt_kind": "local_candidate_not_queue_update",
+  "requested_revision": "bbb222",
+  "authority": {
+    "source": "provided scenario",
+    "actions": [
+      "deploy bbb222"
+    ],
+    "new_permission_required_for_same_deploy": false
+  },
+  "evidence": {
+    "review": {
+      "revision": "aaa111",
+      "applicable_to_candidate": false
+    },
+    "ci": {
+      "revision": "bbb222",
+      "result": "passed",
+      "required_check_set_verified": false
+    },
+    "deployment": {
+      "call_result": "timeout_after_send",
+      "remote_release": "r7",
+      "remote_revision": "bbb222",
+      "remote_status": "serving",
+      "reconciliation": "remote serving release resolves submission as deployed; do not resubmit"
+    },
+    "live_acceptance": {
+      "result": "not_run",
+      "reason": "scenario contains no live acceptance evidence"
+    }
+  },
+  "state": {
+    "implemented": "not independently assessed",
+    "reviewed": "stale review; required review applicability unresolved",
+    "deployed": "r7 serving bbb222 per supplied dashboard evidence",
+    "live_verified": false,
+    "closed": false
+  },
+  "next_actions": [
+    "Read the actual APP-42 acceptance and project review/required-check policy; map this candidate status into the existing native queue state.",
+    "Preserve the timeout and serving-release evidence; verify target/release linkage if the supplied dashboard is not already an authenticated platform observation. Do not repeat deployment.",
+    "Review the final bbb222 diff against APP-42 acceptance and obtain applicable independent review when required; approval of aaa111 does not carry over.",
+    "Confirm the completed CI results cover the project-required check set on bbb222; rerun only affected/missing checks.",
+    "Run the safe acceptance scenario against r7 using the project QA binding, recording target, revision, timestamp, result and cleanup; do not substitute a health response.",
+    "Persist the actual evidence and unresolved review/QA status in APP-42 when tracker access and write authority are confirmed; close only after the required review and acceptance pass."
+  ],
+  "unknowns": [
+    "queue URL/native status/owner",
+    "review policy and final diff",
+    "required CI set",
+    "QA target and safe test identity",
+    "rollback path",
+    "actual event timestamps"
+  ],
+  "next_owner": "current delivery operator; consult configured review/acceptance owner"
+}

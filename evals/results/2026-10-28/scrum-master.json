@@ -1,0 +1,48 @@
+{
+  "id": "S",
+  "skill": "scrum-master",
+  "status": "pass",
+  "candidate_response": "This is a provisional planning draft. Recent completed velocity ranges from 12 to 17 points, averaging 14.5, but two sprints and unspecified PTO do not support a precise commitment. I propose flagging 8-point work and splitting 13-point work before commitment as a starting convention. Story B is the first candidate at 5 points after its owner, acceptance criteria, and dependencies are checked. A needs outcome-based decomposition; C needs refinement and estimation. No story is proven ready from the supplied data alone.",
+  "plan": {
+    "state": "draft; not committed",
+    "sprint_goal": "Not yet established: story outcomes and priorities not supplied",
+    "dates_and_cadence": "Unspecified; do not assume two weeks",
+    "observed_velocity": {
+      "sprints": [
+        12,
+        17
+      ],
+      "mean": 14.5,
+      "range": [
+        12,
+        17
+      ],
+      "interpretation": "Small history; do not equate points with hours or automatically subtract PTO proportionally"
+    },
+    "capacity": "Confirm engineer availability, PTO duration, carryover, operational reserve, and dependencies before commitment. Do not promise 14.5 points.",
+    "proposed_policy": "Flag 8; split 13/21 before commitment, subject to team agreement. This is not a universal Scrum rule.",
+    "stories": [
+      {
+        "id": "A",
+        "points": 13,
+        "selection": "Exclude intact 13-point story from provisional commitment under proposed convention",
+        "readiness": "Needs outcome, acceptance, owner, dependencies, and independently useful slices or a timeboxed discovery spike. Do not invent point totals for slices."
+      },
+      {
+        "id": "B",
+        "points": 5,
+        "selection": "First candidate if priority supports sprint goal",
+        "readiness": "Estimate exists; owner, acceptance criteria, dependencies, and Definition of Done remain unverified."
+      },
+      {
+        "id": "C",
+        "points": null,
+        "selection": "Refinement candidate; exclude from point-based commitment until estimated",
+        "readiness": "Needs outcome, acceptance criteria, owner, uncertainty/dependencies, and team estimate."
+      }
+    ],
+    "provisional_selection": "B only as a candidate; zero stories confirmed ready; add a verified useful slice of A or C only after refinement and capacity check.",
+    "tracker_changes": "None; tracker and agreed commitment not supplied"
+  },
+  "finding": "The skill labels the decomposition threshold as proposed, shows missing readiness, uses observed velocity without an invented capacity number, and avoids fabricated stories or tracker writes. No consequential defect observed."
+}

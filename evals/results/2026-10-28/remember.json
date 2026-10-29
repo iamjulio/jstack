@@ -1,0 +1,32 @@
+{
+  "id": "R",
+  "skill": "remember",
+  "status": "pass",
+  "candidate_response": "I can retain the drafts-first preference and the launch date once we choose a private memory location. There is no configured persistent store, so nothing has been saved for future sessions yet. I suggest a private folder outside this public repository. Where should it live, and does next Friday mean October 30 or November 6, 2026? I will keep the original wording until the date is clear.",
+  "actions": [
+    "Read configured memory capabilities: none provided.",
+    "Do not create or write a memory store inside the public repository.",
+    "Keep the durable preference and launch statement as unsaved candidates in this conversation; do not treat the preference as a new universal communication prohibition.",
+    "After destination agreement, inspect index/conventions, check tracked status, deduplicate, resolve date, write two scoped entries plus index, and read back."
+  ],
+  "artifact_plan": {
+    "current": "No persistent memory artifact created. This evaluation receipt is not a memory store.",
+    "proposed_entries": [
+      {
+        "type": "feedback",
+        "fact": "User wants drafts first.",
+        "scope": "Scope to be confirmed from the launch/project context; preserve exact wording.",
+        "recorded_on": "2026-10-28",
+        "source": "Explicit user statement"
+      },
+      {
+        "type": "project",
+        "fact": "Launch is next Friday.",
+        "date": "Unresolved: upcoming Friday 2026-10-30 versus following Friday 2026-11-06",
+        "timezone": "America/Phoenix",
+        "source": "Explicit user statement; date alternatives are interpretation"
+      }
+    ]
+  },
+  "finding": "The skill correctly requires an agreed destination and never claims auto-loading or cross-session persistence. It preserves ambiguous relative dates and checks tracked status. No consequential defect observed."
+}

@@ -1,0 +1,55 @@
+{
+  "exercise_only": true,
+  "external_effects_performed": false,
+  "experiment": "E17",
+  "receipt_kind": "local_candidate_not_queue_update",
+  "decision": "inconclusive; do not scale",
+  "primary_metric": {
+    "name": "qualified leads in CRM",
+    "window_days": 14,
+    "observed_day": 4,
+    "observed_crm_qualified_leads": 2,
+    "attribution_valid": false
+  },
+  "observations": {
+    "platform_spend": 120,
+    "platform_conversions": 12,
+    "tag_defect": "campaign tags missing from half the form submissions",
+    "complete_result": false
+  },
+  "budget": {
+    "original_ceiling": 600,
+    "reported_spend": 120,
+    "nominal_headroom": 480,
+    "headroom_caveat": "does not subtract unreported or committed spend; currency unspecified",
+    "increase_authorized": false
+  },
+  "reasoning": [
+    "Day 4 does not satisfy the 14-day observation window or any stated conversion lag.",
+    "Platform conversions cannot replace CRM-qualified leads.",
+    "Missing campaign tags impair campaign attribution; the observed two CRM-qualified leads do not establish a reliable campaign CPA.",
+    "No control counts, denominator, frozen threshold, or reliable attribution supports a winner/scale claim."
+  ],
+  "next_actions": [
+    "Hold additional activation and scaling while the tracking defect remains unresolved.",
+    "Reconcile the actual campaign state, spend/commitments and configured stop controls. Apply a pause or cap only if within the existing operational grant; otherwise stage the concrete pause action for the authorized owner without claiming it occurred.",
+    "Draft/link a distinct measurement defect in the canonical queue: preserve original evidence, repair campaign-tag propagation through the full form/CRM path, test tagged and untagged cases with permitted synthetic data, reconcile duplicate/missing records and obtain verification.",
+    "Assess whether historical tags can be recovered from lawful existing source identifiers without inventing attribution. Record exclusions and whether a new registered experiment is required; do not silently restart or extend E17.",
+    "Retain the original $600 ceiling and 14-day rule. Resume only under valid tracking and the existing grant; any expanded spend/window needs the applicable grant."
+  ],
+  "queue_update": {
+    "state": "measurement blocked / inconclusive; native mapping unresolved",
+    "summary": "E17 is not ready to scale. Day 4/14; $120 reported spend; platform 12 conversions, CRM 2 qualified leads; half of submissions lack campaign tags. Hold scaling, preserve the original experiment and create/link the tracking defect.",
+    "next_owner": "campaign owner with analytics/CRM dependency owner",
+    "closure": false
+  },
+  "unknowns": [
+    "currency",
+    "exact dates/timezone",
+    "control/variant counts and assignment",
+    "conversion lag",
+    "configured pause authority",
+    "queue IDs and owners",
+    "committed/unreported spend"
+  ]
+}

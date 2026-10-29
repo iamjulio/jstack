@@ -1,0 +1,49 @@
+{
+  "date": "2026-10-28",
+  "method": "Independent agent application of final skill instructions to synthetic requests and evidence; no external effects. Author and applying agent differ for each skill. This was a small qualitative forward test, not the complete 18-case catalog or a model benchmark.",
+  "runtime": "Codex subagents with inherited session settings; exact model/runtime version and decoding settings were not separately recorded.",
+  "results": [
+    {
+      "skill": "ad-buying",
+      "outcome": "pass in the scoped synthetic scenario",
+      "artifact": "ad-buying.json",
+      "skill_tree_sha256": "9301c8fbf81f7ec0102c48004fede1a79043cd5990c40a2d6bc80938e1b4f263"
+    },
+    {
+      "skill": "marketing-factory",
+      "outcome": "pass in the scoped synthetic scenario",
+      "artifact": "marketing-factory.json",
+      "skill_tree_sha256": "74549ee19518bff32428bef05bbb45e706ad400c27194d579aeb4e3a4015881b"
+    },
+    {
+      "skill": "remember",
+      "outcome": "pass in the scoped synthetic scenario",
+      "artifact": "remember.json",
+      "skill_tree_sha256": "db1322c7cddfa268435bb03f796eb3d7670f352718b13c58052c037c3245d5cf"
+    },
+    {
+      "skill": "scrum-master",
+      "outcome": "pass in the scoped synthetic scenario",
+      "artifact": "scrum-master.json",
+      "skill_tree_sha256": "6bec4a8adbf9bc2258c5f730b2dcae5e38f2e746ebf6624200cd3fcb2e857206"
+    },
+    {
+      "skill": "software-factory",
+      "outcome": "pass in the scoped synthetic scenario",
+      "artifact": "software-factory.json",
+      "skill_tree_sha256": "51e1a87184bad23e8d72c3e58d3ba8d73cff9f2d423e674ee474e6c73bd9d576"
+    },
+    {
+      "skill": "web-publisher",
+      "outcome": "pass in the scoped synthetic scenario",
+      "artifact": "web-publisher.json",
+      "skill_tree_sha256": "80440e0074960deed7a15f28db543de1f4e2ff5c74e650727503debeebeb74f4"
+    }
+  ],
+  "limitations": [
+    "No repeated runs or baseline comparison",
+    "No live cloud, ad platform, tracker, CRM, or cross-session memory integration verified",
+    "No speech recognition model was downloaded or run",
+    "Public cases are regression examples, not a held-out benchmark"
+  ]
+}

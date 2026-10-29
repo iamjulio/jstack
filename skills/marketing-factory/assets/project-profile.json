@@ -1,0 +1,14 @@
+{
+  "profile_version": 1,
+  "organization": null,
+  "accountable_owner": null,
+  "execution_identity": null,
+  "queue": {"provider": null, "project": null, "state_mapping": {}, "dedupe_field": null},
+  "assets": {"repository": null, "revision_convention": null, "review_policy": null},
+  "offer_truth_source": null,
+  "channels": [],
+  "measurement": {"business_record": null, "analytics_source": null, "event_definitions": {}, "attribution_window": null, "deduplication_key": null},
+  "authority": {"evidence_reference": null, "actions": [], "account_scope": null, "audience_scope": null, "expires_at": null},
+  "limits": {"spend_ceiling": null, "currency": null, "volume_ceiling": null, "repair_attempts": 1, "time_minutes": null},
+  "decision_owner": null
+}

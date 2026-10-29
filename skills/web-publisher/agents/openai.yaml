@@ -1,0 +1,4 @@
+interface:
+  display_name: "Web Publisher"
+  short_description: "Publish static sites with verified private access"
+  default_prompt: "Use $web-publisher to prepare and verify a static site release with protected admin access."

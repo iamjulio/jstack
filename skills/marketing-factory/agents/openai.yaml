@@ -1,0 +1,4 @@
+interface:
+  display_name: "Marketing Factory"
+  short_description: "Run campaigns through experiments and measured outcomes"
+  default_prompt: "Use $marketing-factory to turn this marketing goal into versioned creative, a bounded experiment and measured follow-up."
